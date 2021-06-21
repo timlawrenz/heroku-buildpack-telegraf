@@ -8,6 +8,6 @@ First create a telegraf.conf file in your app's home directory. Take a look at [
 
 Then add the buildpack to the list of heroku buildpacks:
 
-    heroku buildpacks:add --index 1 https://github.com/skrud/heroku-buildpack-telegraf.git
+    heroku buildpacks:add --index 1 https://github.com/logzio/heroku-buildpack-telegraf.git
 
 
