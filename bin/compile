@@ -13,6 +13,11 @@ CACHE_DIR=$2
 ENV_DIR=$3
 WORKING_DIR=$(pwd)
 
+echo "BUILD_DIR ${BUILD_DIR}"
+echo "BUILD_DIR ${CACHE_DIR}"
+echo "BUILD_DIR ${ENV_DIR}"
+echo "WORKING_DIR ${WORKING_DIR}"
+
 # Export user env variable to use in the file
 for KEY in TELEGRAF_CONF; do
   [ -f $ENV_DIR/$KEY ] && export "$KEY=$(cat $ENV_DIR/$KEY)"
@@ -41,15 +46,6 @@ tar -C $CACHE_DIR -zxf $CACHE_DIR/$TELEGRAF_FILENAME
 # Copy the telegraf binary to the build dir
 mkdir -p $BUILD_DIR/bin
 cp $CACHE_DIR/telegraf/usr/bin/telegraf $BUILD_DIR/bin/telegraf
-
-influxdb_ssl_ca_cert="INFLUXDB_SSL_CA_CERT"
-if [ -f $ENV_DIR/$influxdb_ssl_ca_cert ]; then
-    echo "Found certificate for InfluxDB SSL CA" | indent
-    mkdir -p $BUILD_DIR/.telegraf/etc
-    cp $ENV_DIR/$influxdb_ssl_ca_cert $BUILD_DIR/.telegraf/etc/influxdb_ssl_ca_cert.pem
-else
-    echo "No certificate found"
-fi
 
 if [ ! -d $BUILD_DIR/.profile.d ]; then
     mkdir -p "$BUILD_DIR/.profile.d"
