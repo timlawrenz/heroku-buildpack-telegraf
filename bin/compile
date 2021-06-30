@@ -45,7 +45,7 @@ tar -C $CACHE_DIR -zxf $CACHE_DIR/$TELEGRAF_FILENAME
 
 # Copy the telegraf binary to the build dir
 mkdir -p $BUILD_DIR/bin
-cp $CACHE_DIR/$TELEGRAF_FILENAME/usr/bin/telegraf $BUILD_DIR/bin/telegraf
+cp $CACHE_DIR/telegraf-$TELEGRAF_VERSION/usr/bin/telegraf $BUILD_DIR/bin/telegraf
 
 if [ ! -d $BUILD_DIR/.profile.d ]; then
     mkdir -p "$BUILD_DIR/.profile.d"
