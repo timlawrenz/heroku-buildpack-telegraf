@@ -12,9 +12,11 @@ You can use this buildpack for other observability platform, just change the out
 ## Installation
 Download the telegraf.conf to your app's home directory and run the following commands:
 
-heroku labs:enable runtime-dyno-metadata -a <<your-app-name>>
-heroku config:set LOGZIO_LISTENER=https://<<LOGZIO_LISTENER>>:8053                      
-heroku config:set LOGZIO_TOKEN=<<LOGZIO_METRIC_TOKEN>>
+    heroku labs:enable runtime-dyno-metadata -a <<your-app-name>>
+    
+    heroku config:set LOGZIO_LISTENER=https://<<LOGZIO_LISTENER>>:8053   
+    
+    heroku config:set LOGZIO_TOKEN=<<LOGZIO_METRIC_TOKEN>>
     
 Then add the buildpack to the list of heroku buildpacks:
 
