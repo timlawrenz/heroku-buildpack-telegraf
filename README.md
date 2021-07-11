@@ -19,13 +19,13 @@ Repelace the following with the relevant paramters:
 
 | Variable | Value |
 |---|---|
-| <<your-app-name>> | your heroku app name (for example obscure-earth-56999 ) |
+| <<HEROKU_APP_NAME>> | your heroku app name (for example obscure-earth-56999 ) |
 | <<LOGZIO_LISTENER>> | your Logzio listener (for example listener.logz.io )|
 | <<LOGZIO_METRIC_TOKEN>> | your Logzio metrics token |
     
 and run the following commands inside your heroku app directory:
 
-    heroku labs:enable runtime-dyno-metadata -a <<your-app-name>>
+    heroku labs:enable runtime-dyno-metadata -a <<HEROKU_APP_NAME>>
     
     heroku config:set LOGZIO_LISTENER=https://<<LOGZIO_LISTENER>>:8053   
     
