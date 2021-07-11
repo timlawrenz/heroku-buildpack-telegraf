@@ -1,5 +1,3 @@
-# WIP - shouldnt be used
-
 # heroku-buildpack-telegraf
 
 Based on [Skrud work](https://github.com/skrud/heroku-buildpack-telegraf)
