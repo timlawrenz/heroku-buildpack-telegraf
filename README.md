@@ -24,7 +24,7 @@ Then add the buildpack to the list of heroku buildpacks:
     
     git commit --allow-empty -m "Rebuild slug"
     
-    git push heroku master
+    git push heroku main
     
 Wait a few seconds and you will see your dyno system metrics in Logz.io platform
 
