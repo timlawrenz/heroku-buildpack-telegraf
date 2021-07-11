@@ -17,9 +17,14 @@ Download [this telegraf.conf](telegraf.conf) to your app's home directory and ru
     
     heroku config:set LOGZIO_TOKEN=<<LOGZIO_METRIC_TOKEN>>
     
+    
 Then add the buildpack to the list of heroku buildpacks:
 
     heroku buildpacks:add --index 1 https://github.com/logzio/heroku-buildpack-telegraf.git
+    
+    git commit --allow-empty -m "Rebuild slug"
+    
+    git push heroku master
     
 Wait a few seconds and you will see your dyno system metrics in Logz.io platform
 
