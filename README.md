@@ -9,7 +9,20 @@ This buildpack downloads the latest Telegraf release (at the time of writing, 1.
 You can use this buildpack for other observability platform (which support telegraf agent), just change the output in the config.
 
 ## Installation
-Download [this telegraf.conf](telegraf.conf) to your app's home directory and run the following commands omside your heroku app directory:
+From your heroku git directory download [this telegraf.conf](https://raw.githubusercontent.com/logzio/heroku-buildpack-telegraf/master/telegraf.conf).
+
+    wget -O telegraf.conf https://raw.githubusercontent.com/logzio/heroku-buildpack-telegraf/master/telegraf.conf
+
+## Enable enviroment variable
+
+Repelace the following with the relevant paramters:
+
+| Variable | Value |
+| <<your-app-name>> | your heroku app name (for example obscure-earth-56999 ) |
+| <<LOGZIO_LISTENER>> | your Logzio listener (for example listener.logz.io )|
+| <<LOGZIO_METRIC_TOKEN>> | your Logzio metrics token |
+    
+and run the following commands inside your heroku app directory:
 
     heroku labs:enable runtime-dyno-metadata -a <<your-app-name>>
     
