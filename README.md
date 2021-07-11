@@ -18,6 +18,7 @@ From your heroku git directory download [this telegraf.conf](https://raw.githubu
 Repelace the following with the relevant paramters:
 
 | Variable | Value |
+|---|---|
 | <<your-app-name>> | your heroku app name (for example obscure-earth-56999 ) |
 | <<LOGZIO_LISTENER>> | your Logzio listener (for example listener.logz.io )|
 | <<LOGZIO_METRIC_TOKEN>> | your Logzio metrics token |
