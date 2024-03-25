@@ -4,7 +4,7 @@ Based on [Skrud work](https://github.com/skrud/heroku-buildpack-telegraf)
 
 A simple heroku buildpack to download, deploy and launch Telegraf on your dynos.
 
-This buildpack downloads the latest Telegraf release (at the time of writing, 1.19.0), extracts it on your dyno and starts it via a .profile.d script.
+This buildpack downloads the latest Telegraf release (at the time of writing, 1.29.5), extracts it on your dyno and starts it via a .profile.d script.
 
 You can use this buildpack for other observability platform (which support telegraf agent), just change the output in the config.
 
